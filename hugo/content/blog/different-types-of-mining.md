@@ -3,7 +3,7 @@ title: "Different Types of Mining"
 meta_title: "Different Types of Mining"
 description: "The various types of mining operations that exist for resource extraction."
 date: 2026-03-26T22:38:41+08:00
-image: "/images/image-placeholder.png"
+image: "/images/types-of-mining.jpg"
 categories: ["Mining"]
 author: "the-sovereign-miner"
 tags: ["info"]

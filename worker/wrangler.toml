@@ -1,8 +1,13 @@
 name = "sovereign-miner-contact"
 main = "src/index.js"
 compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
 
 [[d1_databases]]
 binding = "DB"
 database_name = "sovereign-miner-db"
 database_id = "b43f0fef-dc53-4dcb-be3c-0a7116383e92"
+
+[[send_email]]
+name = "SEND_EMAIL"
+destination_address = "holla@sovereign-miner.com"

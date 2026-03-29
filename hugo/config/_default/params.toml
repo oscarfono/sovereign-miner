@@ -16,7 +16,7 @@ theme_default = "system" # options: light / dark / system
 mainSections = ["blog"]
 
 # Contact form — self-hosted Express API on Linode (update when backend is live)
-contact_form_action = "" # https://api.sovereign-miner.com/contact
+contact_form_action = "https://api.sovereign-miner.com/contact"
 
 google_tag_manager = "" # Add GA4 tag when ready: G-XXXXXXXXXX
 google_adsense = ""

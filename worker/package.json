@@ -11,6 +11,6 @@
     "db:list:remote": "wrangler d1 execute sovereign-miner-db --remote --command=\"SELECT * FROM contacts ORDER BY created_at DESC\""
   },
   "devDependencies": {
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.78.0"
   }
 }

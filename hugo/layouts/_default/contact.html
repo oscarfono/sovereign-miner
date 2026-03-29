@@ -1,7 +1,6 @@
 {{ define "main" }}
 <section class="section">
   <div class="container">
-    {{ partial "breadcrumbs.html" . }}
     <div class="row justify-center">
       <div class="lg:col-7">
         <h1 class="h2 mb-6">{{ .Title }}</h1>
@@ -15,7 +14,7 @@
               id="name"
               name="name"
               class="form-input"
-              placeholder="John Puna"
+              placeholder="John Doe"
               type="text"
               required
               />
@@ -29,7 +28,7 @@
               id="email"
               name="email"
               class="form-input"
-              placeholder="john.puna@email.com"
+              placeholder="john.doe@email.com"
               type="email"
               required
               />

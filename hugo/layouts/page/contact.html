@@ -1,0 +1,121 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    {{ partial "breadcrumbs.html" . }}
+    <div class="row justify-center">
+      <div class="lg:col-7">
+        <h1 class="h2 mb-6">{{ .Title }}</h1>
+
+        <form id="contact-form" novalidate>
+          <div class="mb-6">
+            <label for="name" class="form-label">
+              Full Name <span class="text-red-500">*</span>
+            </label>
+            <input
+              id="name"
+              name="name"
+              class="form-input"
+              placeholder="John Doe"
+              type="text"
+              required
+              />
+          </div>
+
+          <div class="mb-6">
+            <label for="email" class="form-label">
+              Email <span class="text-red-500">*</span>
+            </label>
+            <input
+              id="email"
+              name="email"
+              class="form-input"
+              placeholder="john.doe@email.com"
+              type="email"
+              required
+              />
+          </div>
+
+          <div class="mb-6">
+            <label for="message" class="form-label">
+              Message <span class="text-red-500">*</span>
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-input"
+              placeholder="Message goes here..."
+              rows="8"
+              required
+              ></textarea>
+          </div>
+
+          <div id="form-feedback" class="mb-6 hidden"></div>
+
+          <button type="submit" id="submit-btn" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById("contact-form");
+  const feedback = document.getElementById("form-feedback");
+  const submitBtn = document.getElementById("submit-btn");
+
+  form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      // Client-side validation
+      if (!name || !email || !message) {
+          showFeedback("Please fill in all fields.", "error");
+          return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+      hideFeedback();
+
+      try {
+          const response = await fetch("{{ .Site.Params.contact_form_action }}", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name, email, message }),
+          });
+
+          const data = await response.json();
+
+          if (response.ok && data.success) {
+              showFeedback("Message sent. I'll get back to you soon.", "success");
+              form.reset();
+          } else {
+              showFeedback(data.error || "Something went wrong. Please try again.", "error");
+          }
+      } catch (err) {
+          showFeedback("Could not send message. Please try again later.", "error");
+      } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Submit";
+      }
+  });
+
+  function showFeedback(message, type) {
+      feedback.textContent = message;
+      feedback.className =
+          type === "success"
+          ? "mb-6 p-4 rounded bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200"
+          : "mb-6 p-4 rounded bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200";
+  }
+
+  function hideFeedback() {
+      feedback.className = "mb-6 hidden";
+      feedback.textContent = "";
+  }
+</script>
+{{ end }}

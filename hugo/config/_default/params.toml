@@ -1,0 +1,92 @@
+#################### Site Parameters ############################
+
+favicon = "images/favicon.png"
+logo = "images/logo.png"
+logo_darkmode = "images/logo-darkmode.png"
+logo_width = "160px"
+logo_height = "32px"
+logo_webp = true
+logo_text = "The Sovereign Miner"
+
+navbar_fixed = true
+
+theme_switcher = true
+theme_default = "system" # options: light / dark / system
+
+mainSections = ["blog"]
+
+# Contact form — self-hosted Express API on Linode (update when backend is live)
+contact_form_action = "" # https://api.sovereign-miner.com/contact
+
+google_tag_manager = "" # Add GA4 tag when ready: G-XXXXXXXXXX
+google_adsense = ""
+
+custom_script = ""
+
+copyright = "© 2026 The Sovereign Miner"
+
+# Preloader
+[preloader]
+enable = false
+preloader = ""
+
+# Navigation button
+[navigation_button]
+enable = true
+label = "GitHub"
+link = "https://github.com/oscarfono"
+
+# Search
+[search]
+enable = true
+primary_color = "#121212"
+include_sections = ["blog"]
+show_image = true
+show_description = true
+show_tags = true
+show_categories = true
+
+# Announcement bar
+[announcement]
+enable = true
+expire_days = 7
+content = "<span class='text-center block'><a class='underline' href='https://ko-fi.com/thesovereignminer' target='_blank' rel='noopener'>☕️ Buy me a coffee ☕️</a></span>"
+
+# SEO / OpenGraph / Twitter Card
+[metadata]
+keywords = ["FIFO", "Mining", "Western Australia", "financial independence", "fly-in fly-out"]
+description = "Straight talk on FIFO mining work, money, and getting out."
+author = "The Sovereign Miner"
+twitter = "thesovereignminer"
+image = "images/og-image.png"
+
+# Site verification (add codes when ready)
+[site_verification]
+google = ""
+bing = ""
+baidu = ""
+facebook = ""
+mastodon = ""
+
+# Cookies (disabled — you handle this via your own config)
+[cookies]
+enable = false
+expire_days = 60
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+button = "I Accept"
+
+# Mermaid diagrams
+[mermaid]
+js_url = "https://cdn.jsdelivr.net/npm/mermaid@latest/dist/mermaid.esm.min.mjs"
+
+# Sidebar widgets
+[widgets]
+sidebar = ["categories", "tags"]
+
+# Google Map (disabled)
+[google_map]
+enable = false
+
+# Subscription (disabled)
+[subscription]
+enable = false

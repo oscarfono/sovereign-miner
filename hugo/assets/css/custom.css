@@ -1,0 +1,11 @@
+/* Add your own custom styles here */
+a:hover {
+    @apply text-[#D4AF37]; /* Classic Gold Hex */
+    transition: color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    @apply bg-[#B8860B] border-[#D4AF37] text-white;
+    transition: all 0.3s ease;
+}

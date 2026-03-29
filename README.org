@@ -1,0 +1,206 @@
+#+TITLE: Sovereign Miner
+#+AUTHOR: Cooper Oscarfono
+#+DESCRIPTION: FIFO life, financial independence, and retiring on your terms.
+
+/FIFO life, financial independence, and retiring on your terms./
+
+- *Stack:* Hugo · Hugoplate · Tailwind CSS v4 · Cloudflare Pages · Terraform · ox-hugo
+- *Domain:* sovereign-miner.com
+
+* Prerequisites
+
+- [[https://gohugo.io/installation/][Hugo extended]] =>= 0.124.0=
+- [[https://developer.hashicorp.com/terraform/install][Terraform]] =>= 1.5.0=
+- [[https://nodejs.org/][Node.js]] =>= 18= and npm (required by Hugoplate's Tailwind build)
+- Emacs with =ox-hugo= installed
+- A GitHub account + repo
+- Cloudflare account (already managing the domain)
+
+* First-Time Setup
+
+Hugoplate is a template, not a submodule. The correct setup flow is:
+
+#+begin_src bash
+# 1. Clone Hugoplate's setup script into your hugo/ directory
+cd hugo
+npx hugoplate@latest
+
+# This script will:
+#   - Clone the Hugoplate theme into themes/hugoplate/
+#   - Move exampleSite content into the root hugo/ directory
+#   - Set up config/_default/ (params.toml, menus.toml, languages.toml)
+#   - Create data/theme.json for colours and fonts
+
+# 2. Install npm dependencies (Tailwind CSS build pipeline)
+npm install
+
+# 3. Customise your site — edit these files:
+#   hugo.toml                    ← baseURL, title, timezone, pagination
+#   config/_default/params.toml  ← logo, favicon, SEO, search, social links
+#   data/theme.json              ← colours, fonts
+#+end_src
+
+* Local Development
+
+#+begin_src bash
+# Starts Hugo + Tailwind watcher via npm
+./scripts/dev.sh
+# → http://localhost:1313
+# Drafts and future-dated posts are visible in dev mode.
+#+end_src
+
+The =dev.sh= script will run =npm install= automatically if =node_modules/= is
+missing, so it is safe to run on a fresh clone.
+
+* Writing Posts
+
+** Method A — ox-hugo (preferred)
+
+1. Open =hugo/content/posts/posts.org= in Emacs
+2. Add a new top-level heading with the required =:PROPERTIES:= drawer
+3. Write your post in org-mode
+4. Export to Markdown:
+   - Single post under cursor: =C-c C-e H h=
+   - All posts in file: =C-c C-e H A=
+5. Commit the generated =.md= file(s)
+
+** Method B — Hugo directly
+
+#+begin_src bash
+./scripts/new-post.sh "My Post Title"
+# Edit hugo/content/posts/YYYY-MM-DD-my-post-title.md
+#+end_src
+
+* Customisation
+
+Hugoplate's configuration is split across several files:
+
+| File | Purpose |
+|---|---|
+| =hugo.toml= | Base URL, title, timezone, pagination |
+| =config/_default/params.toml= | Logo, favicon, SEO, search, social links |
+| =data/theme.json= | Colours and font families |
+| =config/_default/menus.toml= | Navigation menu items |
+| =config/_default/languages.toml= | Language settings |
+
+* Images
+
+Place iPhone photos in =hugo/static/images/=. Hugoplate uses Hugo's built-in
+image processing pipeline — reference them via the =image= partial for automatic
+responsive sizing and WebP generation.
+
+Place SVG files in =hugo/static/svg/=.
+
+Reference images in content using the Hugoplate image partial:
+
+#+begin_src go-html-template
+{{- partial "image" (dict "Src" "images/my-photo.jpg" "Alt" "Description") -}}
+#+end_src
+
+Or plain Markdown for simple use:
+
+#+begin_src markdown
+![Alt text](/images/my-photo.jpg)
+#+end_src
+
+* Infrastructure (Terraform)
+
+#+begin_src bash
+cd terraform
+cp terraform.tfvars.example terraform.tfvars
+# Fill in: cloudflare_api_token, cloudflare_account_id,
+#          cloudflare_zone_id, github_owner
+
+terraform init
+terraform plan
+terraform apply
+#+end_src
+
+Required Cloudflare API token permissions:
+- *Cloudflare Pages* — Edit
+- *DNS* — Edit (for the sovereign-miner.com zone)
+
+* Deployment
+
+Credentials never leave your machine. No CI secrets. No GitHub Actions.
+
+*Dependencies (install once):*
+
+#+begin_src bash
+brew install jq       # JSON parsing — used by deploy.sh
+brew install hugo     # Hugo extended build tool
+# Node.js/npm already installed
+# curl is built into macOS
+#+end_src
+
+*First-time credential setup:*
+
+#+begin_src bash
+cp .env.example .env
+# Edit .env — add CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID
+# Token needs: Cloudflare Pages — Edit permission only
+#+end_src
+
+*Install the git hook (once per clone):*
+
+#+begin_src bash
+./scripts/install-hooks.sh
+#+end_src
+
+*From then on, just push:*
+
+#+begin_src bash
+git push origin main
+# pre-push hook fires:
+#   npm run build  → Hugo + Tailwind production build
+#   curl           → uploads hugo/public/ to Cloudflare Pages API
+#   push completes
+#+end_src
+
+*Manual deploy* (without pushing):
+
+#+begin_src bash
+./scripts/deploy.sh
+#+end_src
+
+No wrangler. Your =.env= is gitignored and never leaves your machine.
+
+* Project Structure
+
+#+begin_example
+sovereign-miner/
+├── hugo/
+│   ├── hugo.toml                  # Base URL, title, pagination
+│   ├── config/_default/
+│   │   ├── params.toml            # Logo, SEO, search, social links
+│   │   ├── menus.toml             # Navigation
+│   │   └── languages.toml        # Language settings
+│   ├── data/
+│   │   └── theme.json            # Colours and fonts
+│   ├── content/
+│   │   ├── about/
+│   │   ├── guides/
+│   │   └── posts/
+│   │       └── posts.org         # Master ox-hugo source file
+│   ├── themes/
+│   │   └── hugoplate/            # Cloned by npx hugoplate (do not edit)
+│   ├── layouts/                  # Override Hugoplate templates here
+│   ├── assets/css/               # Custom CSS (extends Tailwind)
+│   └── static/
+│       ├── images/               # iPhone JPEGs go here
+│       └── svg/                  # SVG vectors go here
+├── scripts/
+│   ├── deploy.sh                 # Build (npm run build) + deploy to CF Pages
+│   ├── dev.sh                    # Start local dev server (npm run dev)
+│   ├── build.sh                  # Production build only
+│   ├── new-post.sh               # Create a new post quickly
+│   ├── pre-push.hook             # Git hook source
+│   └── install-hooks.sh         # Wire up git hooks (run once)
+├── terraform/
+│   ├── main.tf                   # Cloudflare Pages + DNS resources
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── terraform.tfvars.example
+├── .env.example                  # Credential template — copy to .env
+└── README.org                    # This file
+#+end_example

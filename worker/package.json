@@ -1,0 +1,16 @@
+{
+  "name": "sovereign-miner-contact",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:init:local": "wrangler d1 execute sovereign-miner-db --local --file=./schema.sql",
+    "db:init:remote": "wrangler d1 execute sovereign-miner-db --remote --file=./schema.sql",
+    "db:list:local": "wrangler d1 execute sovereign-miner-db --local --command=\"SELECT * FROM contacts ORDER BY created_at DESC\"",
+    "db:list:remote": "wrangler d1 execute sovereign-miner-db --remote --command=\"SELECT * FROM contacts ORDER BY created_at DESC\""
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

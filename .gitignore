@@ -1,0 +1,73 @@
+# =============================================================
+# Hugo site (hugo/)
+# =============================================================
+
+# Build output
+hugo/public/
+hugo/resources/_gen/
+hugo/.hugo_build.lock
+
+# Hugo module cache
+hugo/tmp/hugo_cache/
+
+# Theme — managed via go.mod (Hugo modules)
+hugo/themes/
+
+# Node (Tailwind / PostCSS build tools)
+hugo/node_modules/
+hugo/npm-debug.log*
+hugo/yarn-debug.log*
+hugo/yarn-error.log*
+
+# Platform config not in use
+hugo/netlify.toml
+hugo/amplify.yml
+hugo/vercel.json
+hugo/vercel-build.sh
+hugo/.gitlab-ci.yml
+
+# Local dev tools
+hugo/.sitepins/
+hugo/.devcontainer/
+
+# Editor
+hugo/.vscode/
+
+# =============================================================
+# Cloudflare Worker (worker/)
+# =============================================================
+
+# Wrangler local state and dev DB
+worker/.wrangler/
+worker/node_modules/
+
+# Local environment secrets (never commit)
+worker/.dev.vars
+
+# =============================================================
+# Common
+# =============================================================
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor
+.idea/
+*.swp
+*.swo
+
+# Emacs autosave and backup files
+\#*\#
+*~
+
+# iCloud conflict files
+*.icloud
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log

@@ -2,7 +2,7 @@
 title: "Hey, I'm the Sovereign Miner."
 meta_title: "About"
 description: "47 years old, Kiwi-born, Perth-based gold miner at Jundee. Ex-builder, ex-Linux engineer. Killing debt, building wealth, and figuring out where to land."
-image: "/images/the-sovereign-miner.jpg"
+image: "/images/avatar.svg"
 layout: "about"
 draft: false
 ---
@@ -15,7 +15,7 @@ This site is where I document the journey. No bullshit, no get-rich-quick garbag
 
 I didn't arrive at the mines in a straight line.
 
-I spent several years in Brisbane as a builder. Hard yakka, long hours, doing it tough like most tradies do. Before that, a decade in Linux systems and network engineering. Good work, but neither path led anywhere I wanted to stay.
+I spent several years in Brisbane as a builder, and even more in NZ. Hard yakka, long hours, doing it tough like most tradies do. Before that, a decade in Linux systems and network engineering. Good work, but neither path led anywhere I wanted to stay.
 
 Now I find myself underground tending to the services that keep operations running in the WA goldfields, and spending my weeks off in Southeast Asia trying to make sure this is the last time I ever have to start from scratch.
 

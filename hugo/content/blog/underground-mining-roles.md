@@ -3,14 +3,19 @@ title: "Underground Mining Roles"
 meta_title: "Underground Mining Roles"
 description: "A list of the roles found at an underground mine site and camp facilities."
 date: 2026-03-24T20:00:01+08:00
-image: "/images/image-placeholder.png"
-categories:
+image: "/images/underground-mining-roles.png"
+categories: ["Mining"]
 author: "the-sovereign-miner"
-tags: ["fifo", "mining", "western-australia"]
+tags: ["underground", "mining", "western-australia"]
 slug: "/undgerground-mining-roles"
-draft: true
+draft: false
 ---
 
+If you're thinking about getting into mining, or you've just landed your first site induction and you're trying to make sense of the org chart, this post is for you. Underground mining operations run on a surprisingly large and specialised workforce, and most of it is invisible to anyone who hasn't worked on site. The roles below cover everything from the production crews driving development underground to the camp staff keeping the whole operation fed, cleaned, and running on schedule.
+
+Not every mine has every role listed here. A small operation might combine several of these into one position, or contract out whole departments. A larger mine, like a Tier 1 gold operation in the Goldfields, will have dedicated people in most of these seats. Either way, understanding what each role actually does, and where it sits in the mine hierarchy, is useful whether you're job hunting, switching disciplines, or just trying to figure out how the place actually functions when you're new on site.
+
+I'll list each under the department they typically fall under:
 
 
 ### Production

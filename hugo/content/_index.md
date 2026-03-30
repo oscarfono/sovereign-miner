@@ -11,7 +11,7 @@ banner:
 # Features
 features:
   - title: "The FIFO Life"
-    image: "/images/service-1.png"
+    image: "/images/the-fifo-life.svg"
     content: "Fly-in fly-out work isn't for everyone, but for the right person at the right time it can change everything. I cover the reality of life on site — the rosters, the camps, the isolation, the camaraderie, and what it actually feels like to be a long way from home."
     bulletpoints:
       - "What a typical swing looks like from the moment you board the plane"
@@ -24,7 +24,7 @@ features:
       label: "Read the Blog"
       link: "/blog"
   - title: "The Money"
-    image: "/images/service-2.png"
+    image: "/images/the-money.svg"
     content: "FIFO pay is serious money — but only if you do something with it. I write about the financial side of this life from a working-class perspective: killing debt, building a property portfolio across Australia and New Zealand, and constructing passive income streams that eventually make the job optional."
     bulletpoints:
       - "Debt elimination as the non-negotiable first step"
@@ -36,7 +36,7 @@ features:
       label: ""
       link: ""
   - title: "The Exit"
-    image: "/images/service-3.png"
+    image: "/images/the-exit.svg"
     content: "The mine is the means, not the destination. My goal is to build enough passive income to retire as a digital nomad — laptop, slow travel, no fixed address, no alarm clock. I spend my breaks moving through Southeast Asia, training martial arts, and scouting for somewhere cheap and good to eventually land."
     bulletpoints:
       - "What financial independence actually looks like on a working-class income"

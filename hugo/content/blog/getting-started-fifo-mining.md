@@ -159,8 +159,6 @@ This is where most guides fall short. They say "apply online" and leave it at th
 
 Agencies have their place. They hold exclusive contracts with some sites and genuinely place people. The downside is they're volume operations - you're one of hundreds of applications. Register with two or three specialist mining recruiters and treat them as one channel, not your whole strategy.
 
-I personally used [KCA Site Services](https://kcasiteservices.com.au) and can thoroughly recommend them.  They're not just a recruiter either.  They also provide a range of services to their mine owner and operator clients, and are well respected by these clients.
-
 **The most underrated approach:**
 
 Know someone already on site. A referral from a current employee carries serious weight. Mining is a small world - if someone vouches for you it gets your application in front of a human rather than an ATS filter. If you don't know anyone yet, LinkedIn and mining forums are worth cultivating before you need them.

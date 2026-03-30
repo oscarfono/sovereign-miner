@@ -1,14 +1,14 @@
 ---
-title: "The Algorithm Before the Recruiter: How ATS Works and How to Beat It in Mining"
-meta_title: "How ATS Filters Mining Job Applications (And How to Get Noticed)"
+title: "The Algorithm Before the Recruiter: How Application Tracking Systems Work and How to Beat Them."
+meta_title: "How Application Tracking Systems Filter Mining Job Applications (And How to Get Noticed)"
 description: "Most mining applications never reach a human. Applicant Tracking Systems filter them out first. Here's how ATS works, who the main players are, and ten practical tips to make sure yours gets through."
 date: 2026-03-26T00:00:00Z
-image: "/images/ats-mining-applications.jpg"
+image: "/images/application-tracking-systems.jpg"
 categories: ["Job Search", "Career Advice"]
 author: the-sovereign-miner
 tags: ["resume", "ATS", "job applications", "FIFO", "mining careers", "cover letter"]
 slug: "ats-mining-job-applications"
-draft: true
+draft: false
 ---
 
 You spend two hours tailoring your resume. You reread your cover letter three times. You hit submit, and then... nothing. No acknowledgement, no rejection, just silence. Before you start wondering if the recruiter hated your font choice, consider this: there's a reasonable chance no human has read your application at all.

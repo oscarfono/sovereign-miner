@@ -15,7 +15,7 @@ theme_default = "system" # options: light / dark / system
 
 mainSections = ["blog"]
 
-# Contact form — self-hosted Express API on Linode (update when backend is live)
+# Contact form — self-hosted serveless function API on cloudflare
 contact_form_action = "https://api.sovereign-miner.com/contact"
 
 google_tag_manager = "" # Add GA4 tag when ready: G-XXXXXXXXXX
@@ -34,7 +34,7 @@ preloader = ""
 [navigation_button]
 enable = true
 label = "GitHub"
-link = "https://github.com/oscarfono"
+link = "https://github.com/oscarfono/sovereign-miner"
 
 # Search
 [search]

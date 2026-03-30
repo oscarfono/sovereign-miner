@@ -11,7 +11,9 @@ slug: "different-types-of-mining"
 draft: false
 ---
 
-Here's a list of all the different types of mining operations:
+Mining is a broad industry, and the work looks very different depending on what's being extracted and where it sits in the ground. The type of operation shapes everything from the equipment on site to the roster you'll work and the pay you'll take home.
+
+Here's a list of all the different types:
 
 {{< accordion title="Surface Mining" >}}
 - Large terraced open pits dug progressively deeper

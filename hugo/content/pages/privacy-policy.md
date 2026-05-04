@@ -1,33 +1,57 @@
 ---
-title: "Privacy"
-# meta title
-meta_title: ""
-# meta description
-description: "This is meta description"
-# save as draft
+title: "Privacy Policy"
+meta_title: "Privacy Policy — The Sovereign Miner"
+description: "How The Sovereign Miner collects, uses, and protects your personal information."
+date: 2026-01-01
 draft: false
 ---
 
-#### Responsibility of Contributors
+This Privacy Policy explains how The Sovereign Miner (sovereign-miner.com) handles personal information. It is plain and direct, because that is how this site operates.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+## Who runs this site
 
-pretium, aliquam sit. Praesent elementum magna amet, tincidunt eros, nibh in leo. Malesuada purus, lacus, at aliquam suspendisse tempus. Quis tempus amet, velit nascetur sollicitudin. At sollicitudin eget amet in. Eu velit nascetur sollicitudin erhdfvssfvrgss eget viverra nec elementum. Lacus, facilisis tristique lectus in.
+The Sovereign Miner is a personal blog operated by Cooper Oscarfono. It is not a company, not a financial services provider, and not an employer. It is one person writing about FIFO work, money, and building a life outside the industry.
 
-#### Gathering of Personal Information
+Contact: cooper@oscarfono.com
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus. Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
+## What information is collected
 
-#### Protection of Personal- Information
+### Contact form submissions
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat quisque aliquam sagittis. Sem turpis sed viverra massa gravida pharetra. Non dui dolor potenti eu dignissim fusce. Ultrices amet, in curabitur a arcu a lectus morbi id. Iaculis erat sagittis in tortor cursus.
+If you use the contact form, your name, email address, and message are collected. That data is submitted to a self-hosted API (api.sovereign-miner.com) and stored in a private database. It is used only to respond to your message. It is not shared with third parties, not used for marketing, and not sold.
 
-Molestie urna eu tortor, erat scelerisque eget. Nunc hendrerit sed interdum lacus. Lorem quis viverra sed
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus, donec nunc eros, ullamcorper id feugiat
+### Cloudflare
 
-#### Privacy Policy Changes
+This site is hosted on Cloudflare Pages and served through the Cloudflare network. Cloudflare processes requests at the network level and may collect standard technical data such as IP addresses, request timestamps, and browser information as part of delivering the site and protecting against abuse. This is governed by [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 
-1. Sll the Themefisher items are designed to be with the latest , We check all
-2. comments that threaten or harm the reputation of any person or organization
-3. personal information including, but limited to, email addresses, telephone numbers
-4. Any Update come in The technology Customer will get automatic Notification.
+### Analytics
+
+This site does not currently use Google Analytics or any third-party analytics service. If that changes, this policy will be updated before any tracking is activated.
+
+### Cookies
+
+This site does not use tracking cookies or advertising cookies. Some functionality provided by Cloudflare may involve cookies at the infrastructure level, but no cookies are set by this site for the purpose of identifying or tracking visitors.
+
+## What is not collected
+
+- No advertising data
+- No purchase or payment information (this site does not sell anything)
+- No data from third-party social platforms
+
+## External links
+
+Posts on this site may link to external websites. Once you leave sovereign-miner.com, this policy no longer applies. Check the privacy policy of any external site you visit.
+
+## Ko-fi
+
+The announcement bar on this site links to a Ko-fi page (ko-fi.com/thesovereignminer). Ko-fi is an independent platform with its own privacy policy. Any transaction you make there is subject to Ko-fi's terms and conditions, not this policy.
+
+## Your rights
+
+You can request access to any personal data held about you, request its correction or deletion, or withdraw consent for its use. Send a request to cooper@oscarfono.com and it will be handled promptly.
+
+## Changes to this policy
+
+If this policy changes in a meaningful way, the date below will be updated. Check back if you want to know the current position.
+
+Last updated: 4 May 2026
